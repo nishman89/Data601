@@ -5,3 +5,4 @@ def get_greeting(time_of_day: int) -> str:
         return 'Good afternoon!'
     else:
        return 'Good evening'
+
