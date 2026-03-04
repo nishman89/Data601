@@ -4,8 +4,10 @@
 
 import pytest
 
+
 from main.unit_testing_intro import get_greeting
 
+from parametrize import parametrize
 
 def test_get_greeting_given_time_21_returns_good_evening():
     # #Arrange (Given)
@@ -34,3 +36,14 @@ def test_various_assertions():
 
     # Type checking
     assert isinstance(get_greeting(10), str)
+
+
+@parametrize("time", [6,7,8,9,10,11])
+def test_get_greeting_returns_good_morning_for_morning_times(time):
+    assert get_greeting(time) == "Good morning!"
+
+
+@parametrize("time,expected", [(11, "Good morning!"),(12, "Good afternoon!")])
+def boundary_value_11_12_returns_correct_output(time, expected):
+    assert get_greeting(time) == expected
+
