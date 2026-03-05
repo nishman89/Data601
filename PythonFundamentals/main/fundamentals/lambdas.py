@@ -45,3 +45,19 @@ print(sorted_students)
 # my_list_alt = [11,22,13,43,5]
 # sorted_list = sorted(my_list_alt)
 # print(sorted_list)
+
+
+# 1. *Calculate Age in Dog Years
+ages = [5, 10, 15, 20, 25]
+dog_years = list(map(lambda x: x * 7, ages))
+print(dog_years)
+
+# 2. Even letters in a list of stirngs
+fruit = ["apple", "banana", "cherry", "date", "fig", "grape"]
+even_letters = list(filter(lambda x:  len(x) % 2 == 0, fruit))
+print(even_letters)
+
+# 3. Sort by Second Element
+characters = [(1, 'Rick'), (3, 'Morty'), (2, 'Summer'), (4, 'Beth')]
+sorted_characters = list(sorted(characters, key=lambda x: len(x[1])))
+print(sorted_characters)
