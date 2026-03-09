@@ -1,3 +1,5 @@
+[![Python CI with pytest](https://github.com/nishman89/Data601/actions/workflows/python-package.yml/badge.svg)](https://github.com/nishman89/Data601/actions/workflows/python-package.yml)
+
 # H1 Headings
 
 ## H2 Headings
