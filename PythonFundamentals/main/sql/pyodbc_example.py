@@ -13,5 +13,9 @@ conn = pyodbc.connect(
   f'SERVER={server};DATABASE={database};UID={username};PWD={password}'
 )
 cursor = conn.cursor()
-cursor.execute("SELECT * FROM Customers")
-print(cursor.fetchall())
+query = cursor.execute("SELECT * FROM Customers")
+all_customers = query.fetchall()
+for record in all_customers:
+    # print(record)
+    print(f"Customer Id: {record[0]} - Company Name {record[1]}")
+
