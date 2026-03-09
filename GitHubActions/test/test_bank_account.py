@@ -6,7 +6,7 @@ class TestBankAccount:
 
     def test_initial_balance(self):
         account = BankAccount(100.0)
-        assert account.get_balance() == 100.0
+        assert account.get_balance() == 200.0
 
     def test_initial_balance_zero(self):
         account = BankAccount(0.0)
